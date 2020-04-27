@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1,
+        #box2 {
+            height: 400px;
+            width: 500px;
+        }
+
+        #box1 img,
+        #box2 img {
+            width: 100%;
+            height: 100%;
+
+        }
+
+        #box2 {
+            margin-top: 20px;
+        }
+
+        #box3,
+        #box4 {
+            height: 600px;
+            width: 700px;
+            position: fixed;
+            display: none;
+        }
+
+        #box3 img,
+        #box4 img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box1">
+        <img src="images/1.jpg" alt="">
+    </div>
+    <div id="box2">
+        <img src="images/2.jpg" alt="">
+    </div>
+    <div id="box3">
+        <img src="images/1.jpg" alt="">
+    </div>
+    <div id="box4">
+        <img src="images/2.jpg" alt="">
+    </div>
+</body>
+<script>
+    let box1 = document.querySelector('#box1'),
+        box2 = document.querySelector('#box2'),
+        box3 = document.querySelector('#box3'),
+        box4 = document.querySelector('#box4');
+    box1.onmousemove = function (e) {
+        // console.log(e.clientX, e.clientY);
+        box3.style.display = 'block'
+        box3.style.left = e.clientX + 15 + 'px';
+        box3.style.top = e.clientY + 15 + 'px';
+
+    }
+    box1.onmouseout = function () {
+        box3.style.display = 'none';
+    }
+    box2.onmousemove = function (e) {
+        // console.log(e.clientX, e.clientY);
+        box4.style.display = 'block'
+        box4.style.left = e.clientX + 15 + 'px';
+        box4.style.top = e.clientY + 15 + 'px';
+
+    }
+    box2.onmouseout = function () {
+        box4.style.display = 'none';
+    }
+</script>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <style>
+        .swiper-container {
+            width: 100%;
+            height: 260px;
+            overflow: hidden;
+        }
+        .swiper-container .swiper-slide {
+            height: 260px;
+        }
+        .swiper-container .swiper-slide img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/banner01.png" alt=""></div>
+            <div class="swiper-slide"><img src="images/banner02.png" alt=""></div>
+            <div class="swiper-slide"><img src="images/banner03.png" alt=""></div>
+            <div class="swiper-slide"><img src="images/banner04.png" alt=""></div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+
+        <!-- 如果需要导航按钮 -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- 如果需要滚动条 -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+    <script src="js/swiper.min.js"></script>
+
+    <script>
+        let swp = new Swiper('.swiper-container',)
+    </script>
+
+</body>
+
+</html>

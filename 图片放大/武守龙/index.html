@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 238px;
+            height: 423px;
+            margin: 20px 50px;
+        }
+
+        .box img {
+            width: 100%;
+        }
+
+        .box2 {
+            position: fixed;
+            display: none;
+            width: 283px;
+        }
+
+        .box2 img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="1.jpg" alt="">
+    </div>
+    <div class="box2">
+        <img src="1.jpg" alt="">
+    </div>
+    <script>
+        let box = document.querySelector('.box'),
+            box2 = document.querySelector('.box2');
+        box.onmousemove = function (e) {
+            box2.style.display = 'block';
+            box2.style.left = e.pageX + 15 + 'px';
+            box2.style.top = e.pageY + 15 + 'px';
+        }
+        box.onmouseout = function (e) {
+            box2.style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

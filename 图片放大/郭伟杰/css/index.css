@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+div{
+    width: 384px;
+    height: 216px;
+    margin-top: 30px;
+}
+div img{
+    width: 100%;
+    height: 100%;
+}
+div div{
+    display: none;
+    width: 640px;
+    height: 360px;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+/* .img2{
+    display: none;
+    width: 640px;
+    height: 360px;
+    position: fixed;
+    left: 0;
+    top: 0;
+} */

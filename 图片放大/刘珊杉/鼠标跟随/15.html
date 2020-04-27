@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 500px;
+            height: 310px;
+            margin: 10px auto;
+        }
+
+        div img {
+            width: 100%;
+            height: 100%;
+        }
+
+        div div {
+            display: none;
+            width: 640px;
+            height: 360px;
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <img src="./image/u=167637701,4238592974&fm=11&gp=0.jpg" alt="">
+        <div class="img1">
+            <img src="./image/u=167637701,4238592974&fm=11&gp=0.jpg" alt="">
+        </div>
+    </div>
+
+    <div class="box2">
+        <img src="./image/u=2066735138,2447439061&fm=11&gp=0.jpg" alt="">
+        <div class="img2">
+            <img src="./image/u=2066735138,2447439061&fm=11&gp=0.jpg" alt="">
+        </div>
+    </div>
+
+    <script>
+        let img1 = document.querySelector('.img1'),
+            img2 = document.querySelector('.img2');
+
+        let box1 = document.querySelector('.box1'),
+            box2 = document.querySelector('.box2');
+        box1.onmousemove = function (e) {
+            img1.style.left = e.clientX + 10 + "px";
+            img1.style.top = e.clientY +  10 + "px";
+            img1.style.display = 'block';
+        }
+        box1.onmouseleave = function (e) {
+            img1.style.display = 'none';
+        }
+        box2.onmousemove = function (e) {
+            img2.style.left = e.clientX  + 10 + "px";
+            img2.style.top = e.clientY + 10 + "px";
+            img2.style.display = 'block';
+        }
+        box2.onmouseleave = function (e) {
+            img2.style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

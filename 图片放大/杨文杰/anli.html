@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 300px;
+            height: 300px;
+        }
+
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <img src="yyy.jpg.png" alt="">
+    </div>
+    <script>
+        let box = document.querySelector("#box"),
+            sliderClone = box.cloneNode(true);
+        console.log(sliderClone);
+        sliderClone.style.display = "none";
+        sliderClone.style.position = "fixed";
+        box.onmousemove = function (e) {
+            sliderClone.style.transform = 'scale(1.5)';
+            sliderClone.style.display = 'block';
+            sliderClone.style.left = 200 + e.clientX + 'px';
+            sliderClone.style.top = 200 + e.clientY + 'px';
+            document.body.appendChild(sliderClone);
+        }
+        box.onmouseout = function () {
+            sliderClone.style.display = 'none';
+            
+        }
+    </script>
+</body>
+
+</html>
